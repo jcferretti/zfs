@@ -60,8 +60,7 @@ extern int zfs_getattr_fast(zidmap_t *, u32 request_mask, struct inode *ip,
 #else
 extern int zfs_getattr_fast(zidmap_t *, struct inode *ip, struct kstat *sp);
 #endif
-extern int zfs_setattr(znode_t *zp, vattr_t *vap, int flag, cred_t *cr,
-    zidmap_t *mnt_ns);
+extern int zfs_setattr(znode_t *zp, vattr_t *vap, int flag, cred_t *cr);
 extern int zfs_rename(znode_t *sdzp, char *snm, znode_t *tdzp,
     char *tnm, cred_t *cr, int flags);
 extern int zfs_symlink(znode_t *dzp, char *name, vattr_t *vap,
